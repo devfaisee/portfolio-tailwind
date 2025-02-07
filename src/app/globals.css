@@ -5,6 +5,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +23,50 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tailwind custom classes */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.text-textColor {
+  color: var(--text-color);
+}
+
+.btn-primary {
+  @apply bg-primary text-white font-bold uppercase transition duration-300;
+}
+
+.btn-primary:hover {
+  @apply bg-secondary;
+}
+
+/* Custom utilities */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.h-screen {
+  height: 100vh;
 }
